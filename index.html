@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
- <head>
- <title>Usecase for Developers</title>
- <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
- <script>
- function getInputDeviceGuid() {
- inputDeviceGuid = "DEMO";
- return inputDeviceGuid;
- }
- </script>
+  <head>
+    <title>CAC Test</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+       function getInputDeviceGuid() {
+            var sessionID = getCookie('cac_session_id');
+            if (!sessionID) {
+                inputDeviceGuid = "0e87ac96-aa59-4fc1-ad2a-5e8b44ffd45d";
+            }else {
+              inputDeviceGuid = sessionID;
+              }
+            return inputDeviceGuid;
+        }
+   </script>
+   <script>
+      function getWebSocketsInputDeviceServer() {
+          var server = getCookie('cac_server');
+          if (!server) {
+              webSocketsInputDeviceServer = "ws://kedip16.med.auth.gr:8083";
+          } else {
+            webSocketsInputDeviceServer = server;
+          }
+          return webSocketsInputDeviceServer;
+      }
+    </script>
  <script src="http://kedip16.med.auth.gr/5on5/public/assets/scripts/functionsInputDevice.js"></script>
  </head>
  <body>
