@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Usecase for Developers</title>
+ <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+ <script>
+ function getInputDeviceGuid() {
+ inputDeviceGuid = "DEMO";
+ return inputDeviceGuid;
+ }
+ </script>
+ <script src="http://kedip16.med.auth.gr/5on5/public/assets/scripts/functionsInputDevice.js"></script>
+ </head>
+ <body>
+ <form>
+ <label>Y position of user's HipCenter
+ <input id="y-position" type="text" name="y-position" />
+ </label><br>
+ <label>User's alpha rhythm
+ <input id="alpha-rhythm" type="text" name="alpha-rhythm" />
+ </label><br>
+ <label>User's center of mass (x-axis)
+ <input id="center-of-gravity" type="text" name="center-of-gravity" />
+ </label>
+ </form>
+ <p>RGB Video</p>
+ <img src="" alt="RGB image" id="video">
+ <script>
+ document.addEventListener("skeletonEvent", function(e) {
+ if (e.detail.SkeletonSourceData.Skeletons[0].Joints[0].TrackingState === 2) {
+ document.getElementById("y-position").value =
+e.detail.SkeletonSourceData.Skeletons[0].Joints[0].Position.Y;
+ } else {
+ document.getElementById("y-position").value = 'Not tracked';
+ }
+ });
+ document.addEventListener("wiiEvent", function(e) {
+ document.getElementById("center-of-gravity").value =
+e.detail.WiiSourceData.BalanceBoardState.WeightKg;
+ });
+ document.addEventListener("MindwaveEvent", function(e) {
+ document.getElementById("alpha-rhythm").value = e.detail.MindwaveSourceData.Attention;
+ });
+ document.addEventListener("RGBVideoEvent", function(e) {
+ document.getElementById("video").setAttribute("src", "data:image/jpg;base64," +
+e.detail.RGBVideoSourceData.RGBVideo.base64String);
+ });
+ </script>
+ </body>
+</html>
