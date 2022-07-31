@@ -1,0 +1,213 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v3.1.202510665)"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 724,
+            "type": "VEC3",
+            "max": [
+                7.407927989959717,
+                10.48351764678955,
+                5.754063606262207
+            ],
+            "min": [
+                -7.403899669647217,
+                -20.37109375,
+                -5.262739658355713
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 724,
+            "type": "VEC3",
+            "max": [
+                0.920442521572113,
+                0.9989247918128967,
+                1.0
+            ],
+            "min": [
+                -0.9204427003860474,
+                -0.9871427416801453,
+                -0.867266058921814
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 724,
+            "type": "VEC2",
+            "max": [
+                0.9965372681617737,
+                0.9953317642211914
+            ],
+            "min": [
+                0.0043376171961426739,
+                0.007800936698913574
+            ]
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 724,
+            "type": "VEC2",
+            "max": [
+                0.9975386261940002,
+                1.0
+            ],
+            "min": [
+                0.0,
+                -0.000030994415283203128
+            ]
+        },
+        {
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 724,
+            "type": "VEC2",
+            "max": [
+                1.0,
+                1.0851601362228394
+            ],
+            "min": [
+                0.0,
+                -0.11436152458190918
+            ]
+        },
+        {
+            "bufferView": 5,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 724,
+            "type": "VEC2",
+            "max": [
+                0.9965372681617737,
+                0.9953317642211914
+            ],
+            "min": [
+                0.0043376171961426739,
+                0.007800936698913574
+            ]
+        },
+        {
+            "bufferView": 6,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 1164,
+            "type": "SCALAR",
+            "max": [
+                723.0
+            ],
+            "min": [
+                0.0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 42872,
+            "uri": "fighter2.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 8688,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 8688,
+            "byteLength": 8688,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 17376,
+            "byteLength": 5792,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 23168,
+            "byteLength": 5792,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 28960,
+            "byteLength": 5792,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 34752,
+            "byteLength": 5792,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 40544,
+            "byteLength": 2328,
+            "target": 34963
+        }
+    ],
+    "materials": [
+        {
+            "name": "lambert2",
+            "pbrMetallicRoughness": {
+                "metallicFactor": 0.0
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "probe",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 6,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1,
+                        "TEXCOORD_0": 2,
+                        "TEXCOORD_1": 3,
+                        "TEXCOORD_2": 4,
+                        "TEXCOORD_3": 5
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "probe",
+            "mesh": 0
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0
+}
