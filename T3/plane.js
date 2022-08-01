@@ -63,6 +63,13 @@ export class Airplane {
         }
     }
 
+    mobileSetInitialOrResetPosition(initial = true) {
+        this.object.position.set(0, AIRPLANE_HEIGHT, 10);
+        if (initial) {
+            this.object.rotateX(degreesToRadians(-90));
+        }
+    }
+
     decreaseLife(hitPoints) {
         this.life = this.life - hitPoints;
     }
